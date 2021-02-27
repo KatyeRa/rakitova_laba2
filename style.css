@@ -1,0 +1,29 @@
+* {
+  font-family: "Candara Light";
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: 	;
+}
+.container {
+  display: grid;
+  margin: 40px;
+}
+header {
+  margin: 15px;
+  padding: 15px;
+}
+.elem h2 {
+  text-align: center;
+  margin: 1em 0;
+  padding: .6em 0;
+  background-color: #C6C1C1;
+}
+.template {
+  grid-template-rows: 55% auto 55%;
+  grid-template-columns: 35% 35% auto;
+}
+.areas {
+  grid-template-areas: "main main main";
+}
