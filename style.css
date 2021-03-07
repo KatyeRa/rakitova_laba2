@@ -11,12 +11,7 @@ body{
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: auto;
-  grid-template-area: "header header header header header"
-                      "main main main main sidebar"
-                      "img img img img img"
-                      "footer footer footer footer footer";
   grid-column-gap: 10px;
-  grid-rows-gap: 1rem;
 }
 .header {
   margin: 15px;
@@ -49,7 +44,6 @@ form {
     background: #C6C1C1;
 }
 .header {
-  grid-area: "header";
   width:500px;
   height:50px;
 }
