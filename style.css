@@ -4,13 +4,21 @@
   padding: 0;
 }
 body{
-  background-color: 	;
+  background-color: #928E8E	;
 }
 .container {
+  margin: 30px;
   display: grid;
-  margin: 40px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  grid-template-area: "header header header header header"
+                      "main main main main sidebar"
+                      "img img img img img"
+                      "footer footer footer footer footer";
+  grid-column-gap: 10px;
+  grid-rows-gap: 1rem;
 }
-header {
+.header {
   margin: 15px;
   padding: 15px;
 }
@@ -20,10 +28,126 @@ header {
   padding: .6em 0;
   background-color: #C6C1C1;
 }
+form {
+  border-style: none;
+  border-bottom-style: outset;
+  border-bottom-width: thin;
+  padding: 5px;
+  font-size: 20px;
+}
+.containerr {
+  display: grid;
+  width: 750px;
+  height: 600px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 50px 50px;
+  grid-gap: 10px;
+}
+#rectangle{
+    width:200px;
+    height:100px;
+    background: #C6C1C1;
+}
+.header {
+  grid-area: "header";
+  width:500px;
+  height:50px;
+}
+
 .template {
-  grid-template-rows: 55% auto 55%;
-  grid-template-columns: 35% 35% auto;
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fit, 310px);
+  grid-template-rows: repeat(2, 310px);
 }
 .areas {
-  grid-template-areas: "main main main";
+  grid-template-areas: "main main main"; /*расстановка по сетке*/
+}
+.gap {
+  grid-gap: 30px 30px; /*промежуток между строками и столбцами*/
+}
+.item {
+  grid-gap: 10px 10px;
+  grid-template-columns: repeat(auto-fit, 200px);
+  grid-template-rows: repeat(2, 200px);
+  justify-content: center;
+}
+.item img{
+  max-height: 200px;
+}
+.cont {
+  grid-gap: 10px 10px;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 300px 300px;
+}
+.flow {
+  grid-template-rows: 300px 300px;
+  grid-template-columns: 300px 300px 300px 300px 300px;
+  grid-auto-flow: row;
+}
+.flow {
+  grid-template-columns: repeat(auto-fit, 250px);
+  grid-template-rows: repeat(2, 250px);
+}
+.content-1 {
+    grid-column: 1;
+    grid-row: 1 / 3;
+}
+.content-2 {
+  grid-column: 2;
+  grid-row: 1 / 3;
+}
+.content-3 {
+  grid-column: 3;
+  grid-row: 1 / 3;
+}
+.content-4 {
+    grid-column: 4;
+    grid-row: 1 / 3;
+}
+.flow img {
+  max-width: 250px;
+}
+
+.grid {
+  display: grid;
+  max-width: 800px;
+  margin: auto; /* центрирование контейнера на странице */
+  grid-gap: 10px;
+  grid-template-areas:
+    "my-header my-header my-header"
+    "my-nav my-main my-aside"
+    "my-nav my-section my-section"
+    "my-footer my-footer my-footer";
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px; /* размер шрифта */
+  color: #000; /* цвет текста */
+  border-radius: 5px; /* скругление углов */
+  background-color: #C6C1C1; /* цвет фона */
+  border: 1px solid black; /* граница блока */
+  padding: 10px; /* внутренние отступы */
+
+}
+.l-header {
+    grid-area: my-header;
+}
+.l-nav {
+    grid-area: my-nav;
+}
+.l-main {
+    grid-area: my-main;
+}
+.l-aside {
+    grid-area: my-aside;
+}
+.l-section {
+    grid-area: my-section;
+}
+.l-footer {
+    grid-area: my-footer;
 }
